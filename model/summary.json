@@ -1,0 +1,172 @@
+{
+    "model_info": {
+        "dependent_var": "target",
+        "num_obs": 800,
+        "df_resid": 794,
+        "df_model": 5
+    },
+    "fit_quality": {
+        "llf": {
+            "value": -259.2163751552523,
+            "metric": "Log-Likelihood Function",
+            "description": "Measures the fit of the model. Lower (more negative) values indicate worse fit.",
+            "range": "Typically negative (unbounded below). Relative metric - compare between models.",
+            "interpretation": "Current value -259.22 - Used for likelihood ratio tests"
+        },
+        "aic": {
+            "value": 530.4327503105046,
+            "metric": "Akaike Information Criterion",
+            "description": "Model selection criterion that balances fit and complexity. Lower is better.",
+            "range": "Positive values (can be negative). Relative metric - compare between models. Lower indicates better fit.",
+            "acceptable_interpretation": "No absolute threshold - use for model comparison only",
+            "interpretation": "Current value 530.43 - Compare with other models to select best fit"
+        },
+        "bic": {
+            "value": 558.5404206765122,
+            "metric": "Bayesian Information Criterion",
+            "description": "Similar to AIC but penalizes model complexity more heavily. Lower is better.",
+            "range": "Positive values (can be negative). Relative metric - compare between models. Penalizes complexity more than AIC.",
+            "acceptable_interpretation": "No absolute threshold - use for model comparison only",
+            "interpretation": "Current value 558.54 - Preferred when sample size is large"
+        },
+        "log_likelihood": {
+            "value": -259.2163751552523,
+            "metric": "Log-Likelihood",
+            "description": "Probability of observing the training data given the model parameters.",
+            "range": "Typically negative (unbounded below). Higher (less negative) values indicate better fit.",
+            "interpretation": "Current value -259.22 - Basis for likelihood ratio tests and model comparison"
+        },
+        "pseudo_r_squared": {
+            "value": 0.5325288460438102,
+            "metric": "Pseudo R-squared (McFadden)",
+            "description": "Indicates proportion of variation in target explained by model (0 to 1 scale).",
+            "range": "0.0 to 1.0 - Absolute scale metric",
+            "range_interpretation": {
+                "0.0 - 0.1": "Poor fit",
+                "0.1 - 0.3": "Acceptable fit",
+                "0.3 - 0.5": "Good fit",
+                "0.5 - 1.0": "Excellent fit"
+            },
+            "interpretation": "Current value 0.5325 (53.25%) - Excellent - Model explains substantial variation in target"
+        }
+    },
+    "linear_equation": {
+        "equation_full_precision": "z = 0.052484 - 0.389052*feature_1 + 0.064131*feature_2 - 1.242240*feature_3 - 1.118589*feature_4 - 1.062604*feature_5",
+        "equation_rounded": "z = 0.0525 - 0.3891*feature_1 + 0.0641*feature_2 - 1.2422*feature_3 - 1.1186*feature_4 - 1.0626*feature_5",
+        "description": "Logit linear equation (z). Probability = exp(z) / (1 + exp(z))",
+        "note": "Each feature coefficient shows effect on log-odds scale"
+    },
+    "coefficients": {
+        "Coef.": {
+            "const": 0.052483705339581126,
+            "feature_1": -0.38905221969636206,
+            "feature_2": 0.06413067023245857,
+            "feature_3": -1.2422397991932366,
+            "feature_4": -1.1185886243172372,
+            "feature_5": -1.0626039811737078
+        },
+        "Std.Err.": {
+            "const": 0.11546971863830949,
+            "feature_1": 1.1671194479593145,
+            "feature_2": 0.10748632594051707,
+            "feature_3": 0.2179822229924678,
+            "feature_4": 1.2949312062315226,
+            "feature_5": 0.10278220546014454
+        },
+        "z": {
+            "const": 0.45452354053081206,
+            "feature_1": -0.3333439609601333,
+            "feature_2": 0.5966402672275586,
+            "feature_3": -5.698812417543614,
+            "feature_4": -0.8638208878852542,
+            "feature_5": -10.338404166524231
+        },
+        "P>|z|": {
+            "const": 0.6494520525410812,
+            "feature_1": 0.7388746590015265,
+            "feature_2": 0.5507475808609089,
+            "feature_3": 1.2064488136450431e-08,
+            "feature_4": 0.3876862914549508,
+            "feature_5": 4.723374109649056e-25
+        },
+        "[0.025": {
+            "const": -0.17383278449647888,
+            "feature_1": -2.6765643033528885,
+            "feature_2": -0.14653865744148825,
+            "feature_3": -1.6694771055284523,
+            "feature_4": -3.6566071509880302,
+            "feature_5": -1.2640534021271872
+        },
+        "0.975]": {
+            "const": 0.27880019517564114,
+            "feature_1": 1.8984598639601646,
+            "feature_2": 0.27479999790640536,
+            "feature_3": -0.8150024928580208,
+            "feature_4": 1.4194299023535561,
+            "feature_5": -0.8611545602202284
+        }
+    },
+    "coefficients_summary": {
+        "const": {
+            "coefficient": 0.052483705339581126,
+            "p_value": 0.6494520525410812,
+            "ci_lower": -0.17383278449647888,
+            "ci_upper": 0.27880019517564114,
+            "odds_ratio": 1.053885389234087,
+            "significant": "No",
+            "interpretation": "Not significant - No meaningful effect on target variable",
+            "odds_interpretation": "Unit increase increases odds by 5.39%"
+        },
+        "feature_1": {
+            "coefficient": -0.38905221969636206,
+            "p_value": 0.7388746590015265,
+            "ci_lower": -2.6765643033528885,
+            "ci_upper": 1.8984598639601646,
+            "odds_ratio": 0.6776988798602165,
+            "significant": "No",
+            "interpretation": "Not significant - No meaningful effect on target variable",
+            "odds_interpretation": "Unit increase decreases odds by 32.23%"
+        },
+        "feature_2": {
+            "coefficient": 0.06413067023245857,
+            "p_value": 0.5507475808609089,
+            "ci_lower": -0.14653865744148825,
+            "ci_upper": 0.27479999790640536,
+            "odds_ratio": 1.0662317144050792,
+            "significant": "No",
+            "interpretation": "Not significant - No meaningful effect on target variable",
+            "odds_interpretation": "Unit increase increases odds by 6.62%"
+        },
+        "feature_3": {
+            "coefficient": -1.2422397991932366,
+            "p_value": 1.2064488136450431e-08,
+            "ci_lower": -1.6694771055284523,
+            "ci_upper": -0.8150024928580208,
+            "odds_ratio": 0.28873678073650383,
+            "significant": "Yes",
+            "interpretation": "Highly significant - Strong effect on target variable",
+            "odds_interpretation": "Unit increase decreases odds by 71.13%"
+        },
+        "feature_4": {
+            "coefficient": -1.1185886243172372,
+            "p_value": 0.3876862914549508,
+            "ci_lower": -3.6566071509880302,
+            "ci_upper": 1.4194299023535561,
+            "odds_ratio": 0.3267406231155146,
+            "significant": "No",
+            "interpretation": "Not significant - No meaningful effect on target variable",
+            "odds_interpretation": "Unit increase decreases odds by 67.33%"
+        },
+        "feature_5": {
+            "coefficient": -1.0626039811737078,
+            "p_value": 4.723374109649056e-25,
+            "ci_lower": -1.2640534021271872,
+            "ci_upper": -0.8611545602202284,
+            "odds_ratio": 0.34555481951311245,
+            "significant": "Yes",
+            "interpretation": "Highly significant - Strong effect on target variable",
+            "odds_interpretation": "Unit increase decreases odds by 65.44%"
+        }
+    },
+    "model_summary": "                           Logit Regression Results                           \n==============================================================================\nDep. Variable:                 target   No. Observations:                  800\nModel:                          Logit   Df Residuals:                      794\nMethod:                           MLE   Df Model:                            5\nDate:                Fri, 01 May 2026   Pseudo R-squ.:                  0.5325\nTime:                        23:35:24   Log-Likelihood:                -259.22\nconverged:                       True   LL-Null:                       -554.51\nCovariance Type:            nonrobust   LLR p-value:                2.190e-125\n==============================================================================\n                 coef    std err          z      P>|z|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst          0.0525      0.115      0.455      0.649      -0.174       0.279\nfeature_1     -0.3891      1.167     -0.333      0.739      -2.677       1.898\nfeature_2      0.0641      0.107      0.597      0.551      -0.147       0.275\nfeature_3     -1.2422      0.218     -5.699      0.000      -1.669      -0.815\nfeature_4     -1.1186      1.295     -0.864      0.388      -3.657       1.419\nfeature_5     -1.0626      0.103    -10.338      0.000      -1.264      -0.861\n=============================================================================="
+}
